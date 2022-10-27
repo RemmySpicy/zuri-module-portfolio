@@ -1,0 +1,356 @@
+:root {
+    --clr-main-red: rgb(172, 56, 56);
+    --clr-main-dark: rgb(58, 58, 58);
+    --clr-main-body: rgb(68, 85, 129);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ====== HEADER ===== */
+
+header {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 1.3rem;
+    box-shadow: 2px 0px 5px #1f1f1f;
+    background: var(--clr-main-red);
+}
+
+#navbar {
+    display: flex;
+}
+
+#navbar ul {
+    list-style: none;
+    display: inherit;
+    margin-right: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link li {
+    padding: 20px;
+}
+
+.nav-list:hover {
+    background: var(--clr-main-body);
+}
+
+
+/* =====  WELCOME ===== */
+
+#about {
+    background: radial-gradient(rgb(58, 58, 58), rgb(27, 27, 27));
+    min-height: 100vh;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    width: 75rem;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 1230px) {
+    .container{
+        width: 100%;
+        padding-inline: 1rem;
+    }      
+}
+
+#about h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+#about p {
+    color: var(--clr-main-red);
+    font-size: 2rem;
+    margin: 0;
+    font-style: italic;
+}
+
+
+#about ul {
+    list-style: none;
+    margin-top: 4rem;
+}
+
+#about ul li {
+    margin-bottom: 2rem;
+}
+
+#about ul p {
+    font-size: 1rem;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.details h3 {
+    font-size: 1rem;
+}
+
+.left {
+    text-align: left;
+    width: 20rem;
+}
+
+/* center */
+
+.center {
+    max-height: 100%;
+    width: 20rem;
+    margin-inline: 2rem;
+    background-color: var(--clr-main-red);
+    background-image: url(spicy.jpg);
+    background-size: cover;
+    background-position: -5em;
+    border-radius: 10rem;
+    overflow: hidden;
+
+    outline: 2px solid var(--clr-main-red);
+    outline-offset: 1rem;
+}
+
+.center img {
+    height: 100%;
+}
+
+
+/* right */
+
+.right {
+    width: 20rem;
+    text-align: right;
+}
+
+.right span {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--clr-main-red);
+}
+
+
+/* ===== MAIN CONTENT ===== */
+
+#work {
+    background: var(--clr-main-body);
+    text-align: center;
+    padding: 1rem;
+}
+
+.projects-header {
+    font-size: 2.5rem;
+    width: max-content;
+    max-width: 100%;
+    margin: 4.5rem auto;
+    padding: 0 1.3rem 0.2rem;
+    border-bottom: 2px solid white;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 75rem;
+    margin: auto;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 65rem) {
+    #projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 45rem) {
+    #projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.project-tile {
+    border-radius: 5px;
+    background-color: var(--clr-main-dark);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.code {
+    color: var(--clr-main-dark);
+    font-size: 1.5rem;
+    transition: 300ms ease;
+}
+
+.project-tile:hover .code {
+    color: orange;
+}
+
+.img {
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 1;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.tribute {
+    background-image: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg");
+}
+
+.quote {
+    background-image: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png");
+}
+
+.calc {
+    background-image: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png");
+}
+.map {
+    background-image: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg");
+
+}
+.wiki {
+    background-image: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png");
+}
+.game {
+    background-image: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png");
+}
+
+
+.project-tile p {
+    padding: 1rem;
+    border-radius: 0 0 5px 5px;
+}
+
+
+button {
+    padding: 0.5rem 1rem;
+    background: var(--clr-main-dark);
+    margin: 2rem auto;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: white;
+    transition: 300ms ease;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background: var(--clr-main-red);
+}
+
+button i {
+    font-size: inherit;
+    transition: 300ms ease-out;
+}
+
+button:hover > i {
+    transform: translateX(5px);
+}
+
+
+/* ===== FOOTER ===== */
+
+
+footer {
+    background: var(--clr-main-dark);
+    color: white;
+    text-align: center;
+    height: 85vh;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 5.6rem);
+}
+
+.contact h3 {
+    font-size: 3.5rem;
+    line-height: 2;
+}
+
+em {
+    font-size: 1.5rem;
+    color: var(--clr-main-red);
+}
+
+.contact-links {
+    text-shadow: 2px 2px 1px #1f1f1f;
+}
+
+i {
+    font-size: 1.7rem;
+    margin-inline: 5px;
+}
+
+hr {
+    background: var(--clr-main-red);
+    border: none;
+    height: 4px;
+}
+
+.contact ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 1.2rem;
+}
+
+.contact ul a {
+    padding: 0.8rem;
+    display: flex;
+    place-items: center;
+    transition: 300ms ease;
+}
+
+.contact ul a:hover {
+    transform: translateY(0.8rem);
+}
+
+
+.copyright {
+    /* height: 20rem; */
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    padding: 2rem;
+}
+
+.small-i {
+    font-size: inherit;
+}
