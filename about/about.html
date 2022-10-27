@@ -4,24 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        #about {
+            padding: 0;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            transition: 400ms ease;
+        }
+
+        .details {
+            padding-top: 3.5rem;
+        }
+    </style>
+
     <title>About Me</title>
 </head>
 <body>
     <header>
         <nav id="navbar">
             <ul class="nav-link">
-                <a href="#">
+                <a href="../index.html">
                     <li class="nav-list">Home</li>
                 </a>
-                <a href="about/about.html">
-                    <li class="nav-list">About</li>
+                <a href="#">
+                    <li class="nav-list active">About</li>
                 </a>
-                <a href="contact/contact.html">
+                <a href="../contact/contact.html">
                     <li class="nav-list">Contact</li>
                 </a>
             </ul>

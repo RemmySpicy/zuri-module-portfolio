@@ -133,7 +133,7 @@ a {
     background-color: var(--clr-main-red);
     background-image: url(spicy.jpg);
     background-size: cover;
-    background-position: -5em;
+    background-position: -3.2rem;
     border-radius: 10rem;
     overflow: hidden;
 
@@ -335,7 +335,7 @@ hr {
     padding: 0.8rem;
     display: flex;
     place-items: center;
-    transition: 300ms ease;
+    transition: 150ms ease;
 }
 
 .contact ul a:hover {
@@ -353,4 +353,8 @@ hr {
 
 .small-i {
     font-size: inherit;
+}
+
+.active {
+    background-color: var(--clr-main-body);
 }
