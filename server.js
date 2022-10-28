@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
     let emptyPagePath = path.join(__dirname, '', '404.html')
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
-            if (err === 'ENOENT') {
+            if (err.code === 'ENOENT') {
                 res.writeHead(404)
                 res.write('Error: File not found') 
             } else {
