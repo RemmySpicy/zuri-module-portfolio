@@ -24,15 +24,18 @@ const server = http.createServer((req, res) => {
             if (err.code === 'ENOENT') {
                 res.writeHead(404)
                 res.write('Error: File not found') 
+                res.end()
             } else {
                 res.writeHead(500)
                 res.write('A server error has occured')
+                res.end()
             }
         }
 
         if (!err) {
             res.writeHead(200, {'Content-Type': contentType})
             res.write(data)
+            res.end()
         }
     })
 
