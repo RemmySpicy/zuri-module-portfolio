@@ -43,36 +43,3 @@ server.listen(port, (error) => {
     if (error) console.log("Something went wrong", error)
     else console.log('Server is listening on port', port)
 });
-
-
-
-
-
-
-
-
-// res.writeHead(200, {'Content-Type': 'text/html'})
-// fs.readFile('index.html', (error, data) => {
-//     if (error) {
-//         res.writeHead(404)
-//         res.write('Error: File Not Found!')
-//     } else {
-//         res.write(data)
-//     }
-//     res.end()
-// })
-
-
-
-
-
-// const contactFilePath = path.join(__dirname, 'contact', 'contact.html')
-
-    // if (req === '/') {
-    //     const aboutFilePath = path.join(__dirname, 'about', 'about.html')
-    //     fs.readFile(aboutFilePath, 'utf8', (error, data) => {
-    //         res.writeHead(200, {'Content-Type': 'text/html'})
-    //         res.write(data)
-    //         res.end()
-    //     })
-    // }
