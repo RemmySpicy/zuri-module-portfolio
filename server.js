@@ -36,7 +36,6 @@ const getContentType = (filePath) => {
     if (extName === '.js') return 'text/javascript';
     if (extName === '.css') return 'text/css';
     if (extName === '.jpg') return 'img/jpg';
-    // if (extName === '.js') return 'text.javascript';
 }
 
 server.listen(port, (error) => {
